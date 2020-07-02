@@ -55,7 +55,7 @@ The S3 bucket name.
 
 A comma-separated list of values used to configure the `Access-Control-Allow-Origin` header using [`cors`](https://github.com/expressjs/cors) middleware. For example, `https://excalidraw.com` or `https://excalidraw.com,https://excalidraw-team.now.sh`. For convenience, `http://localhost:` is always allowed.
 
-Regular expression patterns are also supported via `regex:` prefix. For example, `regex:example\.com$`.
+Regular expression patterns are also supported via `regex:` prefix. For example, `regex:example\.com\$` will be converted to `/example\.com$/`.
 
 ## Learn More
 
