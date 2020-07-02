@@ -1,6 +1,5 @@
 import { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 import Cors from 'cors';
-import escapeStringRegexp from 'escape-string-regexp';
 
 const REGEX_PREFIX = 'regex:';
 
@@ -12,7 +11,7 @@ function getOrigins() {
     .filter(Boolean)
     .map((origin) =>
       origin.startsWith(REGEX_PREFIX)
-        ? new RegExp(escapeStringRegexp(origin.slice(REGEX_PREFIX.length)))
+        ? new RegExp(origin.slice(REGEX_PREFIX.length))
         : origin,
     );
 
