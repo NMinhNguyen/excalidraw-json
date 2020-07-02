@@ -7,11 +7,11 @@ export async function getS3Config(): Promise<
   >
 > {
   return {
-    accessKeyId: process.env.S3_ACCESS_KEY_ID,
-    endpoint: process.env.S3_ENDPOINT,
-    secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+    accessKeyId: process.env.EXCALIDRAW_S3_ACCESS_KEY_ID,
+    endpoint: process.env.EXCALIDRAW_S3_ENDPOINT,
+    secretAccessKey: process.env.EXCALIDRAW_S3_SECRET_ACCESS_KEY,
     params: {
-      Bucket: process.env.S3_BUCKET_NAME,
+      Bucket: process.env.EXCALIDRAW_S3_BUCKET_NAME,
     },
   };
 }
