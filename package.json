@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:debug": "node --inspect-brk node_modules/.bin/next dev",
     "build": "next build",
     "start": "next start"
   },
