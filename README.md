@@ -25,13 +25,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 ## Environment Variables
 
-This server can be configured using the following environment variables:
-
-- [`EXCALIDRAW_S3_ACCESS_KEY_ID`](#EXCALIDRAW_S3_ACCESS_KEY_ID)
-- [`EXCALIDRAW_S3_SECRET_ACCESS_KEY`](#EXCALIDRAW_S3_SECRET_ACCESS_KEY)
-- [`EXCALIDRAW_S3_ENDPOINT`](#EXCALIDRAW_S3_ENDPOINT)
-- [`EXCALIDRAW_S3_BUCKET_NAME`](#EXCALIDRAW_S3_BUCKET_NAME)
-- [`EXCALIDRAW_ALLOWED_ORIGIN`](#EXCALIDRAW_ALLOWED_ORIGIN)
+This server can be configured using the environment variables below.
 
 ### `EXCALIDRAW_S3_ACCESS_KEY_ID`
 
