@@ -45,6 +45,12 @@ Default: `excalidraw`
 
 The S3 bucket name.
 
+### `EXCALIDRAW_S3_FORCE_PATH_STYLE`
+
+Default: `false`
+
+Whether to force path-style URLs for S3 objects. Although path-style URLs are [deprecated](https://aws.amazon.com/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/), some S3 storage implementations only work with path-style addressing (e.g. [MinIO](https://docs.min.io/docs/how-to-use-aws-sdk-for-javascript-with-minio-server.html)).
+
 ### `EXCALIDRAW_ALLOWED_ORIGIN`
 
 A comma-separated list of values used to configure the `Access-Control-Allow-Origin` header using [`cors`](https://github.com/expressjs/cors) middleware. For example, `https://excalidraw.com` or `https://excalidraw.com,https://excalidraw-team.now.sh`. For convenience, `http://localhost:` is always allowed.
