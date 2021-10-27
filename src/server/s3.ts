@@ -1,4 +1,5 @@
 import AWS from 'aws-sdk';
+import type { AWSError } from 'aws-sdk';
 
 const BUCKET_NAME = process.env.EXCALIDRAW_S3_BUCKET_NAME!;
 
@@ -22,8 +23,8 @@ export async function get(id: string) {
     };
     const data = await s3.getObject(objectParams).promise();
     return data.Body;
-  } catch (error) {
-    if (error.code === 'NoSuchKey') {
+  } catch (error: unknown) {
+    if ((error as AWSError)?.code === 'NoSuchKey') {
       return null;
     }
     throw error;
