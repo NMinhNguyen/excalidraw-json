@@ -24,7 +24,7 @@ const cors = Cors({
 
 export function corsMiddleware<
   Request extends NextApiRequest = NextApiRequest,
-  Response = any
+  Response = any,
 >(
   fn: (
     req: Request,
@@ -35,7 +35,7 @@ export function corsMiddleware<
   res: NextApiResponse<Response>,
 ) => ReturnType<NextApiHandler> {
   return async (req, res) => {
-    await new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       cors(
         // @ts-ignore
         req,
